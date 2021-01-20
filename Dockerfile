@@ -9,6 +9,6 @@ RUN useradd ubuntu \
  && usermod -s /bin/bash -G adm,sudo -p $(echo passw0rd | mkpasswd -s -m sha-512) ubuntu \
  && mkdir -p /home/ubuntu && chown -R ubuntu.ubuntu /home/ubuntu
 
-EXPOSE 22
+EXPOSE 12567
 COPY entrypoint.sh /
 ENTRYPOINT [ "/entrypoint.sh" ]
