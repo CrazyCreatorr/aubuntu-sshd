@@ -5,7 +5,7 @@ if [ ! -z "${SSH_PORT}" ]; then
     echo "SSH_PORT(${SSH_PORT}) must be a number."
     exit 1
   fi
-  sed -ri "s/^#?Port 22$/Port ${SSH_PORT}/g" /etc/ssh/sshd_config
+  sed -ri "s/^#?Port 12567$/Port ${SSH_PORT}/g" /etc/ssh/sshd_config
 fi
 
 /usr/sbin/sshd -D -e "$@"
